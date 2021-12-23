@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./public/stylesheets/style.css" />
+    <script type="module" defer src="./public/scripts/main.js"></script>
     <title>Count Primes</title>
   </head>
   <body>
@@ -15,7 +21,7 @@
       <div class="concept">
         Enter an integer number in the input field. The program will find all
         the Prime numbers between 1 and the number inputted using an algorithm
-        known as Sieve of Eratosthenes
+        known as <b>Sieve of Eratosthenes</b>
       </div>
       <div class="inputs">
         <table>
@@ -25,14 +31,15 @@
             <th></th>
           </tr>
           <tr>
-            <td>1</td>
-            <td><input type="number" name="" id="" /></td>
-            <td><button>Enter</button></td>
+            <td>0</td>
+            <td><input type="number" id="num" /></td>
+            <td><button id="checker">Enter</button></td>
           </tr>
         </table>
       </div>
       <div class="result">
         <h3>Prime numbers are</h3>
+        <p class="numbers"></p>
       </div>
     </div>
   </body>

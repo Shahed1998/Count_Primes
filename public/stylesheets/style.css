@@ -19,6 +19,15 @@
   margin: 0 auto;
 }
 
+table {
+  border-spacing: 1rem;
+  text-align: center;
+}
+
+table td {
+  margin: 200rem;
+}
+
 .inputs {
   display: flex;
   align-items: center;
@@ -28,7 +37,15 @@
 
 .result {
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
   margin-top: 2rem;
+}
+
+.numbers {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Chrome, Safari, Edge, Opera */
