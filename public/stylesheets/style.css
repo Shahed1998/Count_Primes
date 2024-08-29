@@ -10,34 +10,10 @@
 .header h1 {
   font-weight: 900;
   padding: 2rem;
-  text-align: center;
-}
-
-.concept {
-  text-align: left;
-  width: 50%;
-  margin: 0 auto;
-}
-
-table {
-  border-spacing: 1rem;
-  text-align: center;
-}
-
-table td {
-  margin: 200rem;
-}
-
-.inputs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
 }
 
 .result {
   text-align: center;
-  width: 50%;
   margin: 0 auto;
   margin-top: 2rem;
 }
@@ -46,6 +22,10 @@ table td {
   margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.inputs, .result, .concept,  .header h1{
+  width: 50%;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -62,7 +42,9 @@ input[type='number'] {
 
 @media screen and (max-width: 500px) {
   .concept,
-  .result {
+  .result,
+  .inputs,
+  .header h1 {
     width: 80%;
   }
 }

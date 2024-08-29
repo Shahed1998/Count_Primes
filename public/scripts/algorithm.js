@@ -5,6 +5,8 @@ export function eratosthenes(num) {
     j,
     count = num - 2;
 
+    num++;
+
   for (i = 0; i < num; i++) {
     isPrime[i] = true;
   }
@@ -27,5 +29,6 @@ export function eratosthenes(num) {
     }
   }
 
-  document.querySelector('.numbers').innerHTML = showNum.join(', ');
+  return showNum;
+
 }

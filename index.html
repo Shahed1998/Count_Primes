@@ -4,42 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- bootstrap start -->
+    <link rel="stylesheet" href="./public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css"/>
+    <script defer src="./public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <!-- bootstrap end -->
+
     <link rel="stylesheet" href="./public/stylesheets/style.css" />
     <script type="module" defer src="./public/scripts/main.js"></script>
     <title>Count Primes</title>
   </head>
   <body>
-    <div class="header">
-      <h1>Count Primes</h1>
+
+    <!-- Modal start -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary d-none modal-trigger-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Prime numbers</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="total"></div>
+            <div class="numbers"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+
+    <div class="header mx-auto text-center">
+      <h1 class="mx-auto">Count Primes</h1>
     </div>
     <div class="main">
-      <div class="concept">
+      <div class="concept mx-auto shadow-sm">
         Enter an integer number in the input field. The program will find all
         the Prime numbers between 0 and the number inputted using an algorithm
         known as <b>Sieve of Eratosthenes</b>
       </div>
-      <div class="inputs">
-        <table>
+      <div class="inputs mx-auto my-2">
+        <table class="table w-100 table-borderless">
           <tr>
-            <th>From</th>
-            <th>To</th>
+            <th class="text-start">From</th>
+            <th class="text-start">To</th>
             <th></th>
           </tr>
           <tr>
-            <td>0</td>
-            <td><input type="number" id="num" /></td>
-            <td><button id="checker">Enter</button></td>
+            <td class="text-start">0</td>
+            <td><input class="form-control me-2" type="number" id="num" /></td>
+            <td>
+              <button class="btn btn-primary" id="checker">
+                <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
+                <span role="status">Enter</span>
+              </button>
+            </td>
           </tr>
         </table>
-      </div>
-      <div class="result">
-        <h3>Prime numbers are</h3>
-        <p class="numbers"></p>
       </div>
     </div>
   </body>
